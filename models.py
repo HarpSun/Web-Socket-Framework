@@ -29,7 +29,7 @@ class Model(object):
     @classmethod
     def db_path(cls):
         classname = cls.__name__
-        path = '{}.txt'.format(classname)
+        path = 'file_db/{}.txt'.format(classname)
         return path
 
     @classmethod

@@ -109,7 +109,7 @@ def run(host, port):
     log('开始运行于', 'http://{}:{}'.format(host, port))
     with socket.socket() as s:
         s.bind((host, port))
-        s.listen()
+        s.listen(5)
         while True:
             connection, address = s.accept()
             log('ip <{}>\n'.format(address))
