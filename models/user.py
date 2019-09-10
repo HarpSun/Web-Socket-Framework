@@ -17,15 +17,11 @@ class User(SQLModel):
         self.username = form.get('username', '')
         self.password = form.get('password', '')
 
-    def validate_login(self):
-        all_users = self.all()
-        for user in all_users:
-            if self.username == user.username:
-                return self.password == user.password
-        return False
-
-    def validate_register(self):
-        return len(self.username) > 2 and len(self.password) > 2
+    @classmethod
+    def validate_login(cls, form):
+        salted = cls.salted_password(form['password'])
+        u = User.one_for_username_and_password(username=form['username'], password=salted)
+        return u
 
     @staticmethod
     def salted_password(password, salt='$!@><?>HUI&DWQa`'):

@@ -1,9 +1,11 @@
 import socket
 import urllib.parse
 import _thread
+
 from utils import log
 from routes import error
 from routes import route_dict
+from models.base import SQLModel
 
 
 class Request(object):
@@ -117,6 +119,7 @@ def run(host, port):
 
 
 if __name__ == '__main__':
+    SQLModel.init_connection()
     config = dict(
         host='localhost',
         port=3000,
