@@ -1,5 +1,6 @@
 from utils import log
-from models import User, Message
+from models.user import User
+from models.message import Message
 
 
 def template(name):

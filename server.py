@@ -36,11 +36,11 @@ class Request(object):
 
 def parsed_path(path):
     """
-    输入: /gua?message=hello&author=gua
+    输入: /test?message=hello&author=test
     返回
-    (/gua, {
+    (/test, {
         'message': 'hello',
-        'author': 'gua',
+        'author': 'test',
     })
     """
     index = path.find('?')
