@@ -1,11 +1,9 @@
-# Web-Socket-Server
-基于TCP连接和Socket开发的Web Server
+# Web-Socket-Framework
+基于TCP连接和Socket开发的Web Framework
 
-## 登陆
-![login](https://github.com/HarpSun/Web-Socket-Server/blob/master/screencast/login.gif)
+## 演示
+![demo](https://github.com/HarpSun/Web-Socket-Framework/blob/master/screencast/demo.gif)
 
-## 发信息
-![login](https://github.com/HarpSun/Web-Socket-Server/blob/master/screencast/message.gif)
 
 ## 结构
 
